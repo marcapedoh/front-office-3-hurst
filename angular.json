@@ -25,9 +25,39 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/animate.min.css",
+              "src/assets/css/jquery-ui.min.css",
+              "src/assets/css/meanmenu.min.css",
+              "src/assets/lib/css/nivo-slider.css",
+              "src/assets/lib/css/preview.css",
+              "src/assets/css/slick.min.css",
+              "src/assets/css/lightbox.min.css",
+              "src/assets/css/material-design-iconic-font.css",
+              "src/assets/style.min.css",
+              "src/assets/css/default.css",
+              "src/assets/css/shortcode.css",
+              "src/assets/css/responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/vendor/modernizr-3.11.2.min.js",
+              "src/assets/js/vendor/jquery-3.6.0.min.js",
+              "src/assets/js/vendor/jquery-migrate-3.3.2.min.js",
+              "src/assets/js/jquery.nicescroll.min.js",
+              "src/assets/lib/js/jquery.nivo.slider.js",
+              "src/assets/js/jquery.treeview.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/jquery.meanmenu.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/lightbox.min.js",
+              "src/assets/js/countdon.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/plugins.js",
+              "src/assets/lib/home.js",
+              "src/assets/js/main.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,35 @@
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, of, tap } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+
+  constructor(private httpClient: HttpClient) { }
+
+  login(authRequest: any): Observable<any> {
+    return this.httpClient.post('http://188.213.130.121:8888/clients/login', { email: authRequest.email, password: authRequest.password }, { observe: 'response' }).pipe(
+      tap((response: HttpResponse<any>) => {
+        this.storeAuthToken(response.headers);
+      })
+    );
+  }
+  authToken: string | null = null
+  private storeAuthToken(headers: HttpHeaders) {
+    const authToken = headers.get('access-token');
+    const clientId = headers.get('clientId');
+    console.table(authToken)
+    console.table(clientId)
+    if (authToken && clientId) {
+      this.authToken = authToken;
+      localStorage.setItem('token', JSON.stringify(authToken));
+      localStorage.setItem('clientId', clientId);
+    }
+  }
+
+  register(registrationRequest: any): Observable<any> {
+    return this.httpClient.post('http://188.213.130.121:8085/clients/register', registrationRequest);
+  }
+}
