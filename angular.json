@@ -55,8 +55,8 @@
               "src/assets/js/countdon.min.js",
               "src/assets/js/wow.min.js",
               "src/assets/js/plugins.js",
-              "src/assets/lib/home.js",
-              "src/assets/js/main.min.js"
+              "src/assets/js/main.min.js",
+              "src/assets/lib/home.js"
             ]
           },
           "configurations": {
