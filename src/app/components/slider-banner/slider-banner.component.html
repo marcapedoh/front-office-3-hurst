@@ -21,7 +21,8 @@
         <!-- Slider-banner start -->
         <div class="slider-banner">
             <div class="single-banner banner-1">
-                <a class="banner-thumb" href="#"><img src="assets/img/banner/1.jpg"
+                <a class="banner-thumb" href="#"><img
+                        src="assets/img/banner/1.jpg"
                         alt /></a>
                 <span class="pro-label new-label">new</span>
                 <span class="price">$50.00</span>
@@ -33,7 +34,8 @@
                     now</a>
             </div>
             <div class="single-banner banner-2">
-                <a class="banner-thumb" href="#"><img src="assets/img/banner/2.jpg"
+                <a class="banner-thumb" href="#"><img
+                        src="assets/img/banner/2.jpg"
                         alt /></a>
                 <div class="banner-brief">
                     <h2 class="banner-title"><a href="#">New Product
@@ -205,14 +207,14 @@
                                 <p class="text-gray">If you have an account with
                                     us, Please
                                     login!</p>
-                                <input type="text" name="email"
+                                <input type="text" name="email" [(ngModel)]="authRequest.email"
                                     placeholder="Email here..." />
-                                <input type="password" placeholder="Password" />
+                                <input type="password" placeholder="Password"  name="passwordInput" [(ngModel)]="authRequest.password"/>
                                 <p><a class="text-gray" href="#">Forget your
                                         password?</a></p>
                                 <button class="button-one submit-button mt-15"
                                     data-text="login"
-                                    type="submit">login</button>
+                                    type="submit" (click)="login($event)">login</button>
                             </form>
                         </div>
                     </li>

@@ -1,12 +1,11 @@
 import { AfterViewInit, Component } from '@angular/core';
 declare var $: any;
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-shop-side-bar',
+  templateUrl: './shop-side-bar.component.html',
+  styleUrls: ['./shop-side-bar.component.css']
 })
-export class DashboardComponent implements AfterViewInit{
-
+export class ShopSideBarComponent implements AfterViewInit{
   ngAfterViewInit(): void {
     // Menu
     $("nav#dropdown").meanmenu();

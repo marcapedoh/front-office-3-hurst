@@ -20,7 +20,7 @@ export class AuthEffects {
         catchError((error: string) => of(loginFailure(error)))
       )), tap((action) => {
         if (action.type === '[Auth] loginSuccess') {
-          this.router.navigate(['account'])
+          this.router.navigate(['dashboard'])
         } else {
           let notification: NotificationModel = new NotificationModel();
           notification.message = "Authentication failed try to verify your credentials ";
@@ -39,7 +39,12 @@ export class AuthEffects {
       )
     ), tap((action) => {
       if (action.type === '[Register] RegisterSuccess user') {
-        this.router.navigate(['signin'])
+        let notification: NotificationModel = new NotificationModel();
+          notification.message = "Credentials verified";
+          notification.status = "success";
+          this.webNotification.emitNotification(notification)
+        this.router.navigate(['login'])
+        
       }
     })
   )

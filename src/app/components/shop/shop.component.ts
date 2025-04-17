@@ -1,12 +1,11 @@
 import { AfterViewInit, Component } from '@angular/core';
 declare var $: any;
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-shop',
+  templateUrl: './shop.component.html',
+  styleUrls: ['./shop.component.css']
 })
-export class DashboardComponent implements AfterViewInit{
-
+export class ShopComponent implements AfterViewInit{
   ngAfterViewInit(): void {
     // Menu
     $("nav#dropdown").meanmenu();
@@ -180,7 +179,7 @@ export class DashboardComponent implements AfterViewInit{
       animation: "fade"
     });
 
-    $(".dropdown .option-btn").on("click",  () => {
+    $(".dropdown .option-btn").on("click", function (this: HTMLElement) {
       let menu = $(this).siblings(".dropdown-menu");
       if (menu.hasClass("active")) {
         menu.removeClass("active").slideUp();

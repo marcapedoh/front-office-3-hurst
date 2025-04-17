@@ -52,6 +52,10 @@ import { orderReducer } from './components/auth/store/reducers/order.reducers';
 import { paypalReducer } from './components/auth/store/reducers/paypal.reducers';
 import { productReducer, categoryReducer } from './components/auth/store/reducers/product.reducers';
 import { registerReducer } from './components/auth/store/reducers/register.reducers';
+import { WebNotificationComponent } from './components/web-notification/web-notification.component';
+import { ShopSideBarComponent } from './components/shop-side-bar/shop-side-bar.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { ShopListComponent } from './components/shop-list/shop-list.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +94,11 @@ import { registerReducer } from './components/auth/store/reducers/register.reduc
     RegistrationComponent,
     DashboardComponent,
     SingleProductComponent,
-    SingleBlogComponent
+    SingleBlogComponent,
+    WebNotificationComponent,
+    ShopSideBarComponent,
+    ShopComponent,
+    ShopListComponent
   ],
   imports: [
     BrowserModule,

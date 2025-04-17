@@ -13,6 +13,10 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
+import { SidebarSearchComponent } from './components/sidebar-search/sidebar-search.component';
+import { ShopSideBarComponent } from './components/shop-side-bar/shop-side-bar.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { ShopListComponent } from './components/shop-list/shop-list.component';
 
 const routes: Routes = [
   {
@@ -46,6 +50,18 @@ const routes: Routes = [
   {
     path:"dashboard",
     component:DashboardComponent
+  },
+  {
+    path:'shop',
+    component:ShopSideBarComponent
+  },
+  {
+    path:"shop-page",
+    component:ShopComponent
+  },
+  {
+    path:"shop-list",
+    component:ShopListComponent
   },
   {
     path:"contact",

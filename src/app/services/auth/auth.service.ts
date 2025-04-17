@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
+import { environment } from 'src/app/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class AuthService {
   constructor(private httpClient: HttpClient) { }
 
   login(authRequest: any): Observable<any> {
-    return this.httpClient.post('http://188.213.130.121:8888/clients/login', { email: authRequest.email, password: authRequest.password }, { observe: 'response' }).pipe(
+    return this.httpClient.post(environment.baseApiUrl+':8888/clients/login', { email: authRequest.email, password: authRequest.password }, { observe: 'response' }).pipe(
       tap((response: HttpResponse<any>) => {
         this.storeAuthToken(response.headers);
       })
@@ -30,6 +31,6 @@ export class AuthService {
   }
 
   register(registrationRequest: any): Observable<any> {
-    return this.httpClient.post('http://188.213.130.121:8085/clients/register', registrationRequest);
+    return this.httpClient.post(environment.baseApiUrl+':8085/clients/register', registrationRequest);
   }
 }
